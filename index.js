@@ -1,5 +1,6 @@
 'use strict';
 var NAME = "sucrase";
+var extname = require('path').extname;
 
 var t = require("sucrase");
 function setError(ctx, msg) {
@@ -31,6 +32,8 @@ module.exports = function (task) {
 			} catch (err) {
 				file.data = setError(task, err.message);
 			}
+				const ext = new RegExp(extname(file.base).replace('.', '\\.') + '$', 'i');
+				file.base = file.base.replace(ext, '.js');
 		}
 		this._.files = files;
   });
