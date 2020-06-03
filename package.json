@@ -1,0 +1,32 @@
+{
+  "name": "taskr-sucrase",
+  "version": "1.0.0",
+  "description": "Sucrase plugin for Taskr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanheral/taskr-sucrase.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js | tap-spec"
+  },
+  "author": "Ivan Heral <ivanhernandezal@gmail.com>",
+  "dependencies": {
+    "sucrase": "^3.15.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1"
+  },
+  "devDependencies": {
+    "@taskr/clear": "^1.1.0",
+    "taskr": "^1.1.0"
+  },
+  "engines": {
+    "node": ">= 10.0"
+  },
+  "keywords": [
+    "taskr",
+    "taskr-plugin",
+    "sucrase"
+  ]
+}
